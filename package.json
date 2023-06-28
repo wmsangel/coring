@@ -1,0 +1,26 @@
+{
+  "name": "coring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild:css": "node-sass scss -o css",
+    "build:css": "node-sass scss -o css --output-style compressed",
+    "browsersync": "browser-sync start --proxy \"coring.local\" --files \"css/*.css\", *.html, \"js/*.js\"",
+    "watch:css": "node-sass scss -wo css",
+    "watch:css:pages": "node-sass scss/pages -wo css/pages",
+    "build": "npm run build:css",
+    "dev": "npm run browsersync & npm run watch:css & npm run watch:css:pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmsangel/coring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.27.11",
+    "node-sass": "^8.0.0",
+    "scss": "^0.2.4"
+  }
+}

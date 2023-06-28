@@ -1,0 +1,203 @@
+.c-hero {
+    height: 720px;
+    overflow: hidden;
+
+    &__media {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            object-fit: cover;
+            z-index: 1;
+            animation: heroImg 10s ease-in-out infinite;
+        }
+
+        .c-container {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__von-svg {
+        position: absolute;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1.4s ease-in-out forwards;
+
+        @media (max-width: 992px) {
+            animation: dash .4s ease-in-out forwards;
+        }
+    }
+
+    &__von-svg-1 {
+        top: -60px;
+        left: 210px;
+
+        @media (max-width: 767px) {
+            path {
+                stroke-width: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            left: 120px;
+            top: -84px;
+        }
+    }
+
+    &__von-text {
+        position: absolute;
+        font-weight: 400;
+        font-size: 24px;
+        animation: showVonText .6s ease-in-out forwards;
+        opacity: 0;
+        margin-left: -20px;
+        span {
+            font-size: 86px;
+            line-height: 1;
+
+            @media (max-width: 767px) {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+            animation: showVonText .4s ease-in-out forwards;
+        }
+    }
+
+    &__von-text-1 {
+        top: 30px;
+        left: 14px;
+    }
+
+    &__zum-svg {
+        position: absolute;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 1.4s ease-in-out forwards;
+        animation-delay: 1.1s;
+
+        @media (max-width: 992px) {
+            animation: dash .8s ease-in-out forwards;
+            animation-delay: .2s;
+        }
+    }
+
+    &__zum-svg-1 {
+        top: 160px;
+        left: 760px;
+
+        @media (max-width: 992px) {
+            left: 360px;
+        }
+
+        @media (max-width: 767px) {
+            path {
+                stroke-width: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            left: 180px;
+        }
+    }
+
+    &__zum-text {
+        position: absolute;
+        font-weight: 400;
+        font-size: 24px;
+        animation: showZumText .6s ease-in-out forwards;
+        animation-delay: 2s;
+        opacity: 0;
+        margin-top: -20px;
+        span {
+            font-size: 86px;
+            line-height: 1;
+
+            @media (max-width: 767px) {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 992px) {
+            animation: showZumText .4s ease-in-out forwards;
+            animation-delay: .7s;
+        }
+    }
+
+    &__zum-text-1 {
+        top: 290px;
+        left: 700px;
+
+        @media (max-width: 992px) {
+            left: 300px;
+            top: 300px;
+        }
+
+        @media (max-width: 480px) {
+            left: 140px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        height: 545px;
+    }
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes showZumText {
+    from {
+        margin-top: -20px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes showVonText {
+    from {
+        margin-left: -20px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes heroImg {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,74 @@
+// VARS
+@import "ui/vars";
+
+// FONTS
+@import "ui/fonts";
+
+// COMMON STYLES
+@import "ui/common";
+
+// BLOCKS
+@import "blocks/header";
+@import "blocks/footer";
+
+@import "blocks/hero";
+@import "blocks/welcome";
+@import "blocks/simply";
+@import "blocks/think";
+@import "blocks/together";
+@import "blocks/need-help";
+@import "blocks/menu";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font_main;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.c-container {
+    max-width: 1388px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+main {
+    margin: -140px 0 0 0;
+}
+
+.c-homepage-section {
+    margin-bottom: 40px;
+    border-radius: 40px;
+    padding: 38px 48px;
+    &__title {
+        font-weight: 400;
+        font-size: 68px;
+        text-transform: uppercase;
+        line-height: 1;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            margin-bottom: 90px;
+            font-size: 42px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        border-radius: 30px;
+        width: calc(100% + 26px);
+        margin-left: -13px;
+        margin-right: -13px;
+        padding: 20px 14px;
+    }
+}

@@ -1,0 +1,29 @@
+/********************************************************* Titles */
+.c-title-h1,
+h1 {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFF;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @media (max-width: 767px) {
+        font-size: 48px;
+    }
+}
+
+
+
+
+/********************************************************* Inner pages */
+.c-inner-pages {
+    main {
+        margin: 44px 0;
+
+        @media (max-width: 767px) {
+            margin: 100px 0 80px;
+        }
+    }
+}
